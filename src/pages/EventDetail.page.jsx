@@ -87,7 +87,7 @@ export const EventDetail = () => {
       <EventHeader event={event} />
       <div className="mt-8 space-y-6">
         {/* Text Content Section */}
-        <div className="bg-black/10 dark:bg-white/10 shadow-lg rounded-2xl p-8 border border-white/20 shadow-">
+        <div className="bg-black/10 dark:bg-white/10 shadow-md rounded-2xl p-8 border border-white/20 shadow-">
           <div 
             className="prose prose-lg max-w-none text-left leading-relaxed "
             style={{ fontFamily: 'Myanmar Text, Padauk, Noto Sans Myanmar, sans-serif' }}
