@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply bg-dark text-light;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  :root .card {
+    @apply bg-light text-dark;
+  }
+
+  :root .sub-card {
+    @apply bg-dark text-light;
+  }
+
+  .light-theme {
+    @apply bg-light text-dark;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .light-theme .card {
+    @apply bg-dark text-light;
+  }
+
+  .light-theme .sub-card {
+    @apply bg-light text-dark;
+  }
+
+  html {
+    font-family: 'Georgia', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply transition-colors duration-300;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
+
+@layer components {
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .cardStyle {
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .footer-link:hover {
+    opacity: 0.7;
+  }
+
+  .social-icon:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
+
+  .newsletter-input {
+    background-color: rgba(100, 237, 246, 0.1);
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    color: var(--text-color);
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+
+  .link-style {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .social-icon-style {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+  }
+
+  .newsletter-input::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: var(--text-color);
+    box-shadow: 0 0 0 2px rgba(100, 237, 246, 0.2);
+  }
+
+  .newsletter-button {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+
+  .newsletter-button:hover {
+    transform: translateY(-1px);
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  /* Hide links inside event description */
+  .no-links a {
+    display: none;
+  }
+}
